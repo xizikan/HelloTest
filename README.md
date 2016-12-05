@@ -1,3 +1,3 @@
 # HelloTest
 github test
-test add
+version 1
