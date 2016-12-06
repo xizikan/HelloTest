@@ -2,3 +2,4 @@ test reset
 version1
 add change first
 add change second
+master test
