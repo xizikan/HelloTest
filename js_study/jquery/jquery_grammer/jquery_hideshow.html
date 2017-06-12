@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>隐藏和显示</title>
+</head>
+<script type="text/javascript" src = "../jquery.js"></script>
+<body>
+	<!-- <button id = "hide">隐藏</button>
+	<button id = "show">显示</button> -->
+	<button>toggle(隐藏显示方法)</button>
+	<p>xxxxx</p>
+
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// $("#hide").click(function(){
+		// 	$("p").hide(1000);
+		// })
+		// $("#show").click(function(){
+		// 	$("p").show(1000);
+		// })
+		$("button").click(function(){
+			$("p").toggle(1000);
+		});
+	});
+
+</script>
+</html>

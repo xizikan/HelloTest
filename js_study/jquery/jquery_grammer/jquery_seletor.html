@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src = "../jquery.js"></script>
+</head>
+<body>
+	<button id="button1">class标签消失</button>
+	<button id="button2">id标签消失</button>
+	<p id="test">id是test的p标签</p>
+	<p id="test">id是test的p2标签</p>
+	<p class="test">class是test的p标签</p><br/>
+</body>
+<script>
+	$(document).ready(function(){
+		$("#button1").click(function(){
+			$("p.test").hide();
+		});
+		$("#button2").click(function(){
+			$("p#test").hide();
+		});
+	});
+</script>
+</html>

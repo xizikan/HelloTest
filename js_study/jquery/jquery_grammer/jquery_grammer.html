@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery语法</title>
+<script type="text/javascript" src = "../jquery.js"></script>
+</head>
+<body>
+<p>点我下面的就消失</p>
+<p id = "test">我也是</p>
+<p id = "test2">我还是</p>
+</body>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("p").click(function(){
+			$("#test").hide();
+		});
+	});
+</script>
+</html>
