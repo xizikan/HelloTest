@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画</title>
+	<script type="text/javascript" src = "../jquery.js"></script>
+	<script type="text/javascript" src = "../jquery.color-2.1.2.min.js"></script>
+</head>
+<body>
+	<button id="run">跑起来</button><br>
+	<button id="stop">停止</button><br>
+	<div style="background:#98bf21;height:100px;width:100px;position:absolute">
+		Hello
+	<div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		/*//简单动画   animate
+		$("button").click(function(){
+			$("div").animate({top:'250px'},"fast",function(){
+				$("p").html("结束");
+			});
+		});*/
+		//滑动变形
+		$("#run").click(function(){
+			/* 使用jqueryColor改变颜色
+			$("div").animate({
+				left:'250px',
+				backgroundColor:'#ffb6c1',
+			});*/
+//			 队列
+			var div=$("div");
+//			div.animate({height:'300px',opacity:'0.4'},"slow");
+//			div.animate({width:'300px',opacity:'0.8'},"slow");
+//			div.animate({height:'100px',opacity:'0.4'},"slow");
+//			div.animate({width:'100px',opacity:'0.8'},"slow");
+			div.animate({left:'250px',width:'150px'},"slow");
+			div.animate({fontSize:"3em"},"slow")
+
+
+		});
+
+		$("#stop").click(function () {
+			$("div").stop();
+        })
+
+
+	});
+
+</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>callback函数</title>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <button>点击隐藏</button>
+    <p>this is a paragraph</p>
+</body>
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+           $("p").hide(1000,function () {
+               alert("aaa");
+           });
+        });
+    });
+
+</script>
+
+</html>

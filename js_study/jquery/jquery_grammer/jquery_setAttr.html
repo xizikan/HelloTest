@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery设置</title>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+<p id="test1">这是段落。</p>
+<p id="test2">这是另一个段落。</p>
+<p>Input field: <input type="text" id="test3" value="Mickey Mouse"></p>
+<button id="btn1">设置文本</button>
+<button id="btn2">设置 HTML</button>
+<button id="btn3">设置值</button>
+
+<p id="test4">这是<b>粗体</b>文本。</p>
+<p id="test5">这是另一段<b>粗体</b>文本。</p>
+<button id="btn4">显示旧/新文本</button>
+<button id="btn5">显示旧/新 HTML</button><br><br>
+<a id="test6" href="http://www.baidu.com" title="baidu">baidu.com</a>
+<button id="btn6">设置href属性</button>
+<button id="btn7">设置多个属性</button>
+<button id="btn8">回调</button>
+</body>
+<script>
+    $(document).on("click","#btn1",function () {
+        $("#test1").text("hello world");
+    }).on("click","#btn2",function () {
+        $("#test2").html("<b>hello world</b>");
+    }).on("click","#btn3",function () {
+        $("#test3").val("hello world");
+        //回调函数
+    }).on("click","#btn4",function () {
+        $("#test4").text(function (i,origText) {
+            return "Old text:" + origText + "New text: Hello world! (index: " + i + ")";
+        });
+    }).on("click","#btn5",function () {
+        $("#test5").html(function (i,origText) {
+            return "Old html: " + origText + " New html: Hello <b>world!</b> (index: " + i + ")";
+        });
+    }).on("click","#btn6",function () {
+       $("#test6").attr("href","http://www.google.com")
+    }).on("click","#btn7",function () {
+        $("#test6").attr({
+            "href":"http://www.google.com",
+            "title":"google"
+        });
+    }).on("click","#btn8",function () {
+        $("#test6").attr("href",function (i,origValue) {
+            return origValue + "/lalala";
+        });
+    });
+    
+</script>
+</html>

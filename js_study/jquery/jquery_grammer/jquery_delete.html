@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery删除</title>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <button id="btn1">remove()</button>
+    <button id="btn2">empty()</button>
+    <button id="btn3">选择性删除</button>
+    <div id="div1" style="height: 100px;width:300px;border:1px;background-color: #98bf21">
+        <p class="delete">1111111111</p>
+        <p class="delete">2222222222</p>
+        <p>3333333333</p>
+    </div>
+
+</body>
+<script>
+    $(document).on("click","#btn1",function () {
+        $("div").remove();
+    }).on("click","#btn2",function () {
+        $("div").empty();
+    }).on("click","#btn3",function () {
+        $("p").remove(".delete");
+    });
+
+</script>
+</html>

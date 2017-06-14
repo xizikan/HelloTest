@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery追加</title>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <button id="btn1">增加文本(后)</button>
+    <button id="btn2">增加列表</button>
+    <button id="btn3">增加文本（前）</button>
+    <button id="btn4">before()</button>
+    <button id="btn5">after()</button>
+
+    <p id="p1">一段话</p>
+    <p id="p2">另一段话</p>
+    <ol>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+    </ol>
+
+    <img src="../a.jpg" alt="pic">
+</body>
+<script>
+    $(document).on("click","#btn1",function () {
+        $("p").append("<b>appendText</b>.");
+    }).on("click","#btn2",function () {
+        $("ol").append("<li>appendItem</li>");
+    }).on("click","#btn3",function () {
+        $("p").prepend("<b>prependText</b>");
+    }).on("click","#btn4",function () {
+       $("img").before("<em>before</em>");
+    }).on("click","#btn5",function () {
+       $("img").after("<em>after</em>")
+    });
+
+</script>
+
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery获取</title>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <button id="button1">text</button>
+    <button id="button2">html</button>
+    <button id="button3">val</button>
+    <button id="button4">attr</button>
+    <p id="p1">text内容</p>
+    <input id="text" type="text" value="lalala">
+    <a href="http://www.baidu.com">BaiDu.com</a>
+
+</body>
+
+<script>
+    $(document).on("click","#button1",function () {
+        alert("text:"+$("#p1").text());
+    }).on("click","#button2",function () {
+        alert("html:"+$("#p1").html());
+    }).on("click","#button3",function () {
+        alert("val:"+$("#text").val())
+    }).on("click","#button4",function () {
+        alert($("a").attr("href"));
+    })
+
+</script>
+
+</html>
